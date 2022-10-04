@@ -10,26 +10,59 @@
       <h1>Sign Up</h1>
       <form method="post">
         <div class="Field">
-          <input type="text" name="username" value="" required>
+          <input type="text" id="full_name" value="" required>
           <span></span>
           <label>Full Name</label>
         </div>
         <div class="Field">
-          <input type="text" name="username" value="" required>
+          <input type="text" id="username" value="" required>
           <span></span>
           <label>Username</label>
         </div>
         <div class="Field">
-          <input type="text" name="password" value="" required>
+          <input type="password" id="password" value="" required>
           <span></span>
           <label>Password</label>
         </div>
+        <div class="Field">
+          <label>Role</label>
+          <br><br><br> 
+          <select name="Occupation" id="">
+            <option value="ORGANIZERS">Organizers</option>
+            <option value="CUSTOMERS">Customers</option>
+          </select> 
+        </div>
         <div class="Pass">Forgot Password?</div>
-        <input type="submit" name="" value="Login">
+        <input type="submit" name="" value="Sign Up" onclick="writeData()">
+        
         <div class="SignUp">
           Already A Member? <a href="Login.html">Login</a>
         </div>
       </form>
     </div>
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js";
+      const firebaseConfig = {
+        apiKey: "AIzaSyB-zdKTGvSn0Jndh4KR1rQnQ5fGSLKv6_c",
+        authDomain: "hackover-61d8d.firebaseapp.com",
+        projectId: "hackover-61d8d",
+        storageBucket: "hackover-61d8d.appspot.com",
+        messagingSenderId: "93472684157",
+        appId: "1:93472684157:web:ed6fe9caf11bd30ea01914",
+        measurementId: "G-6N33DX7P85"
+      };
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+      
+      function writeData()
+      {
+        firebase.database().ref("User").set({
+          full_name: document.getElementById("full_name").value,
+          username: document.getElementById("username").value,
+          password: document.getElementById("password").value
+        })
+      }
+    </script>
   </body>
 </html>
