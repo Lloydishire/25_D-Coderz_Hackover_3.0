@@ -1,0 +1,71 @@
+.Navigation
+{
+    align-items: center;
+    padding: 10px 10px 10px 10px;
+}
+
+.Navigation .Search .Bar form
+{
+   position: relative;
+}
+
+.Navigation .Search
+{
+  padding: 10px 10px 10px 10px;
+  background-color: rgb(36, 26, 90);
+  justify-content: space-between;
+}
+
+.Navigation .Search .Bar form input
+{
+  width: 100%;
+  font-size: 16px;
+  padding: 10px 10px 10px 60px;
+  border: 1px solid #ffffff;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+}
+
+.Navigation .Search .Bar
+{
+    display: inline-block;
+}
+
+.Navigation .Search .Button
+{
+    float: right;
+}
+
+.Navigation .Search .Bar form span
+{
+  position: absolute;
+  left: 15px;
+  top: 10px;
+  color: #727272;
+}
+
+.Navigation .Search .Button .Input
+{
+    border-radius: 5px;
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+    justify-content: space-between;
+}
+
+.Navigation .Content
+{
+    background-color: rgb(72, 83, 169);
+    padding: 2px 2px;
+}
+.Navigation .Content ul li
+{
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+  color: white;
+}
+
+/*----------------------------------------------------------------------------*/
+
